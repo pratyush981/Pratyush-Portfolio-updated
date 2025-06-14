@@ -18,7 +18,16 @@ const Experience = () => {
             <div className="relative flex items-center md:justify-center">
               <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-purple-500 rounded-full transform md:-translate-x-1/2 border-4 border-slate-900"></div>
               <div className="ml-12 md:ml-0 md:w-1/2 md:pr-8">
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 md:ml-auto">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 md:ml-auto group">
+                  {/* Image Section */}
+                  <div className="mb-6 overflow-hidden rounded-xl">
+                    <img 
+                      src="/lovable-uploads/1165fbb4-d8f8-4a01-a15c-6cb2a93c1ab7.png" 
+                      alt="Research Intern at NIT Hamirpur"
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-2xl font-semibold text-white">Research Intern</h3>
                     <div className="flex items-center text-purple-400">
