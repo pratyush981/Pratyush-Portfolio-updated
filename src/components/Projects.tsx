@@ -1,51 +1,52 @@
 
 import { useState } from "react";
-import { ExternalLink, Github, Eye } from "lucide-react";
+import { ExternalLink, Github, Eye, Award } from "lucide-react";
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  // Placeholder projects - you can replace these with your actual projects
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and MongoDB",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Image Retrieval using DL & Handcrafted Features",
+      description: "Deep learning-based CBIR system for precise image identification with RGB images, utilizing both Deep Learning algorithms and Handcrafted features.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
+      technologies: ["Python", "TensorFlow", "Keras", "VGG16", "Computer Vision"],
       githubUrl: "#",
       liveUrl: "#",
-      category: "Full Stack"
+      category: "Deep Learning",
+      achievements: ["98.27% accuracy", "Perfect precision", "Strong recall across datasets"]
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-      technologies: ["React", "Firebase", "Material-UI"],
+      title: "Driver State Detection using ML",
+      description: "Machine learning model using Haar-Cascade to identify driver drowsiness, enhancing road safety through physiological sensor data analysis.",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop&ixlib=rb-4.0.3",
+      technologies: ["Python", "OpenCV", "Matplotlib", "TensorFlow", "ML"],
       githubUrl: "#",
       liveUrl: "#",
-      category: "Frontend"
+      category: "Machine Learning",
+      achievements: ["96.2% accuracy", "Multi-modal data integration", "Funded research paper underway"]
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A responsive weather application with location-based forecasts",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
-      technologies: ["JavaScript", "API Integration", "Chart.js"],
+      title: "Emo Narrative",
+      description: "Application analyzing user emotions with 95% accuracy and generating personalized stories using sentiment analysis and natural language generation.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&ixlib=rb-4.0.3",
+      technologies: ["Python", "Generative AI", "APIs", "CNN", "NLP"],
       githubUrl: "#",
       liveUrl: "#",
-      category: "Frontend"
+      category: "Generative AI",
+      achievements: ["95% emotion accuracy", "70% user engagement increase", "GENEVOE'24 award winner"]
     },
     {
       id: 4,
-      title: "Blog Platform",
-      description: "A modern blog platform with user authentication and content management",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
-      technologies: ["Next.js", "PostgreSQL", "Prisma", "NextAuth"],
+      title: "Financial Fraud Detection",
+      description: "Distributed fraud detection system using Apache Spark with Random Forest, SVM, and XGBoost for credit card transaction analysis.",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&ixlib=rb-4.0.3",
+      technologies: ["PySpark", "Random Forest", "SVM", "XGBoost", "Power BI"],
       githubUrl: "#",
-      liveUrl: "#",
-      category: "Full Stack"
+      liveUrl: "https://ieeexplore.ieee.org/",
+      category: "Research",
+      achievements: ["94.2% F1-score", "38% improvement in fraud detection", "75% faster response time"]
     }
   ];
 
@@ -56,7 +57,7 @@ const Projects = () => {
           My <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Projects</span>
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
@@ -77,6 +78,18 @@ const Projects = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                 <p className="text-white/70 mb-4">{project.description}</p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Achievements:</h4>
+                  <ul className="space-y-1">
+                    {project.achievements.map((achievement, index) => (
+                      <li key={index} className="text-white/60 text-sm flex items-center">
+                        <Award size={12} className="mr-2 text-purple-400 flex-shrink-0" />
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
@@ -102,7 +115,7 @@ const Projects = () => {
                     className="flex items-center space-x-2 text-white/70 hover:text-purple-400 transition-colors duration-300"
                   >
                     <ExternalLink size={20} />
-                    <span>Live Demo</span>
+                    <span>{project.id === 4 ? 'IEEE Paper' : 'Demo'}</span>
                   </a>
                 </div>
               </div>
@@ -111,7 +124,7 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-white/70 mb-4">Want to see more of my work?</p>
+          <p className="text-white/70 mb-4">Interested in my research work?</p>
           <a
             href="#"
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-300"

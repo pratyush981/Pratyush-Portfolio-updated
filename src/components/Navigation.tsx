@@ -26,12 +26,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-bold text-white">
-            Portfolio
+            Pratyush Jha
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {["home", "about", "skills", "projects", "contact"].map((item) => (
+            {["home", "about", "skills", "experience", "projects", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -54,7 +54,7 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden bg-slate-900/95 backdrop-blur-sm rounded-lg mt-2 py-4">
-            {["home", "about", "skills", "projects", "contact"].map((item) => (
+            {["home", "about", "skills", "experience", "projects", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}

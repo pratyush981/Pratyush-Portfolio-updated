@@ -7,34 +7,43 @@ const Skills = () => {
 
   const skillCategories = {
     technical: [
-      { name: "JavaScript", level: 85 },
-      { name: "React", level: 80 },
-      { name: "Python", level: 75 },
-      { name: "HTML/CSS", level: 90 },
-      { name: "Node.js", level: 70 },
-      { name: "Git", level: 85 }
+      { name: "Python", level: 90 },
+      { name: "C/C++", level: 85 },
+      { name: "Machine Learning", level: 92 },
+      { name: "Deep Learning", level: 88 },
+      { name: "TensorFlow/Keras", level: 85 },
+      { name: "Computer Vision", level: 87 }
     ],
     tools: [
-      { name: "VS Code", level: 90 },
-      { name: "Figma", level: 75 },
-      { name: "Docker", level: 65 },
-      { name: "AWS", level: 60 },
-      { name: "MongoDB", level: 70 },
-      { name: "PostgreSQL", level: 75 }
+      { name: "VS Code", level: 95 },
+      { name: "GitHub", level: 90 },
+      { name: "Google Colab", level: 92 },
+      { name: "AWS", level: 80 },
+      { name: "Power BI", level: 85 },
+      { name: "Salesforce", level: 75 }
+    ],
+    libraries: [
+      { name: "NumPy", level: 90 },
+      { name: "Pandas", level: 88 },
+      { name: "Matplotlib", level: 85 },
+      { name: "PySpark", level: 82 },
+      { name: "OpenCV", level: 85 },
+      { name: "Tkinter", level: 80 }
     ],
     soft: [
-      { name: "Problem Solving", level: 90 },
-      { name: "Communication", level: 85 },
-      { name: "Team Work", level: 88 },
-      { name: "Leadership", level: 80 },
-      { name: "Adaptability", level: 92 },
-      { name: "Critical Thinking", level: 87 }
+      { name: "Problem Solving", level: 95 },
+      { name: "Communication", level: 88 },
+      { name: "Research Skills", level: 92 },
+      { name: "Leadership", level: 85 },
+      { name: "Time Management", level: 90 },
+      { name: "Adaptability", level: 88 }
     ]
   };
 
   const categories = [
-    { id: "technical", label: "Technical Skills", icon: Code },
+    { id: "technical", label: "Programming & AI", icon: Code },
     { id: "tools", label: "Tools & Platforms", icon: Monitor },
+    { id: "libraries", label: "Libraries & Frameworks", icon: Settings },
     { id: "soft", label: "Soft Skills", icon: Star }
   ];
 

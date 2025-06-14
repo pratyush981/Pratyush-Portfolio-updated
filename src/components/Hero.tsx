@@ -8,7 +8,7 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles = ["Student", "Developer", "Problem Solver", "Tech Enthusiast"];
+  const roles = ["CS Student", "AI Researcher", "ML Developer", "Data Scientist"];
 
   useEffect(() => {
     const handleType = () => {
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Your Name</span>
+          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Pratyush Jha</span>
         </h1>
         
         <div className="text-2xl md:text-3xl text-white/80 mb-8 h-12">
@@ -63,8 +63,8 @@ const Hero = () => {
         </div>
         
         <p className="text-lg text-white/70 max-w-2xl mx-auto mb-12 animate-fade-in animation-delay-500">
-          Passionate about creating innovative solutions and continuously learning new technologies. 
-          Currently seeking opportunities to contribute to meaningful projects.
+          Computer Science student specializing in Cloud Computing with expertise in Machine Learning, 
+          Deep Learning, and AI research. Currently pursuing B.E. at SRM Institute with 8.8 CGPA.
         </p>
         
         <div className="flex justify-center space-x-6 mb-12 animate-fade-in animation-delay-1000">
