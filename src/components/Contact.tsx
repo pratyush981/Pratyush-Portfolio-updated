@@ -52,7 +52,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-white font-medium">Email</p>
-                  <p className="text-white/70">your.email@example.com</p>
+                  <a href="mailto:pratyushjha084@gmail.com" className="text-white/70 hover:text-purple-400 transition-colors">
+                    pratyushjha084@gmail.com
+                  </a>
                 </div>
               </div>
               
@@ -62,7 +64,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-white font-medium">Phone</p>
-                  <p className="text-white/70">+1 (555) 123-4567</p>
+                  <a href="tel:+918978430920" className="text-white/70 hover:text-purple-400 transition-colors">
+                    +91 8978430920
+                  </a>
                 </div>
               </div>
               
@@ -72,21 +76,25 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-white font-medium">Location</p>
-                  <p className="text-white/70">Your City, Country</p>
+                  <p className="text-white/70">Chennai, India</p>
                 </div>
               </div>
             </div>
             
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="bg-white/5 hover:bg-white/10 p-3 rounded-full transition-colors duration-300"
+                href="https://github.com/pratyush981"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 hover:bg-white/10 p-3 rounded-full transition-colors duration-300 hover:scale-110"
               >
                 <Github className="text-white" size={24} />
               </a>
               <a
-                href="#"
-                className="bg-white/5 hover:bg-white/10 p-3 rounded-full transition-colors duration-300"
+                href="https://www.linkedin.com/in/pratyush-jha-01a23a253/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 hover:bg-white/10 p-3 rounded-full transition-colors duration-300 hover:scale-110"
               >
                 <Linkedin className="text-white" size={24} />
               </a>
@@ -155,7 +163,7 @@ const Contact = () => {
         
         <div className="text-center mt-16 pt-8 border-t border-white/10">
           <p className="text-white/50">
-            © 2024 Your Name. Built with ❤️ using React & Tailwind CSS
+            © 2024 Pratyush Jha. Built with ❤️ using React & Tailwind CSS
           </p>
         </div>
       </div>
